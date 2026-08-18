@@ -1,4 +1,4 @@
-import Reveal from "./Reveal";
+import Reveal, { RevealGroup, RevealItem } from "./Reveal";
 
 const TIMELINE = [
   {
@@ -68,11 +68,13 @@ export default function About() {
             he believes words must always align with action.
           </p>
 
-          <ul className="about__credentials">
+          <RevealGroup as="ul" className="about__credentials">
             {CREDENTIALS.map((c) => (
-              <li key={c}>{c}</li>
+              <RevealItem as="li" key={c} y={12}>
+                {c}
+              </RevealItem>
             ))}
-          </ul>
+          </RevealGroup>
         </Reveal>
 
         <Reveal as="div" className="about__timeline" delay={0.15}>

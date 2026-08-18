@@ -1,18 +1,36 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import logo from "../assets/logo.png";
 import licLogo from "../assets/lic-logo.png";
+import CountUp from "./CountUp";
 
 const BADGES = [
-  { value: "15+", label: "Years with LIC" },
+  { numeric: 15, suffix: "+", label: "Years with LIC" },
   { value: "MBA · PGD-HRM", label: "Postgraduate credentials" },
   { value: "Shivamogga", label: "Division office" },
 ];
 
+function HeroMotif() {
+  const prefersReducedMotion = useReducedMotion();
+  return (
+    <motion.svg
+      className="hero__motif"
+      viewBox="0 0 200 200"
+      aria-hidden="true"
+      animate={prefersReducedMotion ? undefined : { rotate: 360 }}
+      transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
+    >
+      <circle cx="100" cy="100" r="98" strokeWidth="0.5" />
+      <circle cx="100" cy="100" r="76" strokeWidth="0.5" />
+      <circle cx="100" cy="100" r="54" strokeWidth="0.5" />
+      <circle cx="100" cy="100" r="32" strokeWidth="0.5" />
+    </motion.svg>
+  );
+}
+
 export default function Hero() {
   return (
     <section id="top" className="hero">
-      <div className="hero__glow hero__glow--one" />
-      <div className="hero__glow hero__glow--two" />
+      <HeroMotif />
 
       <div className="container hero__inner">
         <motion.div
@@ -55,7 +73,13 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 + i * 0.12 }}
               >
-                <strong>{badge.value}</strong>
+                <strong>
+                  {badge.numeric != null ? (
+                    <CountUp value={badge.numeric} suffix={badge.suffix} />
+                  ) : (
+                    badge.value
+                  )}
+                </strong>
                 <span>{badge.label}</span>
               </motion.div>
             ))}

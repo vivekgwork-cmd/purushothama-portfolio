@@ -1,4 +1,5 @@
-import Reveal from "./Reveal";
+import { motion } from "framer-motion";
+import Reveal, { RevealGroup, RevealItem } from "./Reveal";
 
 const STEPS = [
   {
@@ -33,15 +34,22 @@ export default function Process() {
           <p>A simple, guided path from first conversation to your first policy.</p>
         </Reveal>
 
-        <div className="process__track">
+        <RevealGroup className="process__track">
+          <motion.div
+            className="process__line"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true, amount: 0.4 }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          />
           {STEPS.map((step, i) => (
-            <Reveal as="div" key={step.title} delay={i * 0.08} className="process__step">
+            <RevealItem as="div" key={step.title} className="process__step">
               <span className="process__index">{String(i + 1).padStart(2, "0")}</span>
               <h3>{step.title}</h3>
               <p>{step.text}</p>
-            </Reveal>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );
