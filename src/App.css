@@ -564,7 +564,7 @@
   margin-bottom: 8px;
 }
 
-.contact__card input,
+.contact__card input:not([type="checkbox"]),
 .contact__card select,
 .contact__card textarea {
   width: 100%;
@@ -614,6 +614,8 @@
 }
 
 .form-checkbox input {
+  width: auto;
+  flex-shrink: 0;
   margin-top: 3px;
   accent-color: var(--crimson-600);
 }
