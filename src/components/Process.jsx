@@ -28,8 +28,8 @@ export default function Process() {
   return (
     <section id="process" className="section process">
       <div className="container">
-        <Reveal as="div" className="section-head centered">
-          <span className="eyebrow">How It Works</span>
+        <Reveal as="div" className="section-head">
+          <span className="eyebrow eyebrow--light">How It Works</span>
           <h2>Five Steps to Becoming an Advisor</h2>
           <p>A simple, guided path from first conversation to your first policy.</p>
         </Reveal>

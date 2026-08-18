@@ -38,8 +38,8 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a href="#contact" className="btn btn-primary site-nav__cta" onClick={closeMenu}>
-            Apply to Join
+          <a href="#contact" className="link-arrow site-nav__cta" onClick={closeMenu}>
+            Apply to Join <span aria-hidden="true">→</span>
           </a>
         </nav>
 

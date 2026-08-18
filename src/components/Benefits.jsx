@@ -31,7 +31,7 @@ export default function Benefits() {
   return (
     <section id="opportunity" className="section benefits">
       <div className="container">
-        <Reveal as="div" className="section-head centered">
+        <Reveal as="div" className="section-head">
           <span className="eyebrow">The Opportunity</span>
           <h2>Why Build Your Career with LIC</h2>
           <p>
@@ -40,12 +40,14 @@ export default function Benefits() {
           </p>
         </Reveal>
 
-        <RevealGroup className="benefits__grid">
+        <RevealGroup as="div" className="benefits__list">
           {BENEFITS.map((item, i) => (
-            <RevealItem as="div" key={item.title} className="benefit-card">
-              <span className="benefit-card__index">{String(i + 1).padStart(2, "0")}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+            <RevealItem as="div" key={item.title} className="benefit-row">
+              <span className="benefit-row__index">{String(i + 1).padStart(2, "0")}</span>
+              <div className="benefit-row__body">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
             </RevealItem>
           ))}
         </RevealGroup>

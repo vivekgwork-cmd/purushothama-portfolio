@@ -24,9 +24,9 @@ const CREDENTIALS = ["MBA", "PGD-HRM", "MSc — Chemistry"];
 export default function About() {
   return (
     <section id="about" className="section about">
-      <div className="container about__grid">
+      <div className="container about__inner">
         <Reveal as="div" className="about__copy">
-          <span className="eyebrow">About Purushothama P B</span>
+          <span className="eyebrow eyebrow--light">About Purushothama P B</span>
           <h2>A guide, a builder of people, and a believer in human potential.</h2>
 
           <p>
@@ -68,28 +68,30 @@ export default function About() {
             he believes words must always align with action.
           </p>
 
-          <RevealGroup as="ul" className="about__credentials">
-            {CREDENTIALS.map((c) => (
-              <RevealItem as="li" key={c} y={12}>
+          <div className="about__credentials">
+            {CREDENTIALS.map((c, i) => (
+              <span key={c}>
+                {i > 0 && <span className="about__credentials-dot" aria-hidden="true" />}
                 {c}
-              </RevealItem>
+              </span>
             ))}
-          </RevealGroup>
+          </div>
         </Reveal>
 
-        <Reveal as="div" className="about__timeline" delay={0.15}>
-          <h3>Career Journey</h3>
-          <ol>
+        <div className="about__timeline">
+          <span className="about__timeline-label">Career Journey</span>
+          <RevealGroup as="div" className="about__timeline-rail">
+            <div className="about__timeline-line" />
             {TIMELINE.map((item) => (
-              <li key={item.role + item.org}>
-                {item.year && <span className="about__timeline-tag">{item.year}</span>}
+              <RevealItem as="div" key={item.role + item.org} className="about__timeline-item">
+                <span className="about__timeline-tag">{item.year ?? "Prior"}</span>
                 <strong>{item.role}</strong>
                 <span className="about__timeline-org">{item.org}</span>
                 <p>{item.detail}</p>
-              </li>
+              </RevealItem>
             ))}
-          </ol>
-        </Reveal>
+          </RevealGroup>
+        </div>
       </div>
     </section>
   );

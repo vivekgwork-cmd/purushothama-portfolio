@@ -194,6 +194,28 @@ ul {
   width: 100%;
 }
 
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--gold-600);
+}
+
+.link-arrow span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.link-arrow:hover span {
+  transform: translateX(4px);
+}
+
+.link-arrow--light {
+  color: var(--gold-300);
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
