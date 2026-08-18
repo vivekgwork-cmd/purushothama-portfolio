@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import logo from "../assets/logo.png";
-import licLogo from "../assets/lic-logo.jpeg";
+import licLogo from "../assets/lic-logo.png";
 
 const BADGES = [
   { value: "15+", label: "Years with LIC" },

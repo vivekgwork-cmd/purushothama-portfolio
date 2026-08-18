@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import licLogo from "../assets/lic-logo.jpeg";
+import licLogo from "../assets/lic-logo.png";
 
 export default function Footer() {
   const year = new Date().getFullYear();
