@@ -3,16 +3,10 @@ import logo from "../assets/logo.png";
 import licLogo from "../assets/lic-logo.png";
 import CountUp from "./CountUp";
 
-const STATS = [
-  { numeric: 15, suffix: "+", label: "Years with LIC" },
-  { value: "MBA · PGD-HRM", label: "Postgraduate credentials" },
-  { value: "Shivamogga", label: "Division office" },
-];
-
 export default function Hero() {
   return (
     <section id="top" className="hero">
-      <div className="container hero__inner">
+      <div className="hero__content">
         <motion.div
           className="hero__letterhead"
           initial={{ opacity: 0 }}
@@ -37,34 +31,7 @@ export default function Hero() {
             <span className="hero__line">Build a Career</span>
             <span className="hero__line hero__line--accent">of Purpose.</span>
           </h1>
-        </motion.div>
 
-        <motion.div
-          className="hero__stats"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          {STATS.map((stat) => (
-            <div className="hero__stat" key={stat.label}>
-              <strong>
-                {stat.numeric != null ? (
-                  <CountUp value={stat.numeric} suffix={stat.suffix} />
-                ) : (
-                  stat.value
-                )}
-              </strong>
-              <span>{stat.label}</span>
-            </div>
-          ))}
-        </motion.div>
-
-        <motion.div
-          className="hero__foot"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
           <p className="hero__lede">
             Guiding aspiring advisors toward financial freedom, stability and a career
             built on trust — under the banner of India&rsquo;s most trusted insurance
@@ -81,6 +48,33 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+
+      <motion.aside
+        className="hero__panel"
+        initial={{ opacity: 0, x: 28 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div className="hero__panel-stat">
+          <strong>
+            <CountUp value={15} suffix="+" />
+          </strong>
+          <span>Years guiding LIC advisors toward financial freedom</span>
+        </div>
+
+        <div className="hero__panel-rule" aria-hidden="true" />
+
+        <ul className="hero__panel-list">
+          <li>
+            <strong>MBA · PGD-HRM</strong>
+            <span>Postgraduate credentials</span>
+          </li>
+          <li>
+            <strong>Shivamogga</strong>
+            <span>Division office</span>
+          </li>
+        </ul>
+      </motion.aside>
     </section>
   );
 }

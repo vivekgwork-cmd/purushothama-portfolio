@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
-      <div className="container site-header__inner">
+      <div className="site-header__inner">
         <a href="#top" className="brand" onClick={closeMenu}>
           <img src={logo} alt="P. Utham" className="brand__mark" />
           <span className="brand__text">
@@ -33,11 +33,13 @@ export default function Header() {
         </a>
 
         <nav className={`site-nav ${open ? "is-open" : ""}`}>
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map((link, i) => (
             <a key={link.href} href={link.href} onClick={closeMenu}>
+              <span className="site-nav__index">{String(i + 1).padStart(2, "0")}</span>
               {link.label}
             </a>
           ))}
+          <span className="site-nav__rule" aria-hidden="true" />
           <a href="#contact" className="link-arrow site-nav__cta" onClick={closeMenu}>
             Apply to Join <span aria-hidden="true">→</span>
           </a>
