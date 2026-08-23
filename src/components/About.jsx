@@ -76,6 +76,12 @@ export default function About() {
               </span>
             ))}
           </div>
+
+          <div className="about__cta">
+            <a href="#opportunity" className="link-arrow link-arrow--light">
+              See the Opportunity <span aria-hidden="true">→</span>
+            </a>
+          </div>
         </Reveal>
 
         <div className="about__timeline">

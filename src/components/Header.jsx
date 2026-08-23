@@ -33,9 +33,8 @@ export default function Header() {
         </a>
 
         <nav className={`site-nav ${open ? "is-open" : ""}`}>
-          {NAV_LINKS.map((link, i) => (
+          {NAV_LINKS.map((link) => (
             <a key={link.href} href={link.href} onClick={closeMenu}>
-              <span className="site-nav__index">{String(i + 1).padStart(2, "0")}</span>
               {link.label}
             </a>
           ))}

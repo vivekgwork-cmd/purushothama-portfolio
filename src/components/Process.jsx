@@ -50,6 +50,12 @@ export default function Process() {
             </RevealItem>
           ))}
         </RevealGroup>
+
+        <Reveal as="div" className="process__cta">
+          <a href="#contact" className="btn btn-primary">
+            Start Your Journey
+          </a>
+        </Reveal>
       </div>
     </section>
   );

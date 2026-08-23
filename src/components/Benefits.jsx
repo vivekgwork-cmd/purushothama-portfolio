@@ -51,6 +51,12 @@ export default function Benefits() {
             </RevealItem>
           ))}
         </RevealGroup>
+
+        <Reveal as="div" className="benefits__cta">
+          <a href="#process" className="link-arrow">
+            See How It Works <span aria-hidden="true">→</span>
+          </a>
+        </Reveal>
       </div>
     </section>
   );

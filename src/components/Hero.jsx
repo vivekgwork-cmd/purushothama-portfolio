@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import logo from "../assets/logo.png";
-import licLogo from "../assets/lic-logo.png";
-import CountUp from "./CountUp";
 
 export default function Hero() {
   return (
@@ -13,8 +11,6 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <img src={licLogo} alt="Life Insurance Corporation of India" className="hero__lic-logo" />
-          <span className="hero__divider" />
           <img src={logo} alt="P. Utham" className="hero__brand-logo" />
         </motion.div>
 
@@ -55,25 +51,11 @@ export default function Hero() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="hero__panel-stat">
-          <strong>
-            <CountUp value={15} suffix="+" />
-          </strong>
-          <span>Years guiding LIC advisors toward financial freedom</span>
-        </div>
-
-        <div className="hero__panel-rule" aria-hidden="true" />
-
-        <ul className="hero__panel-list">
-          <li>
-            <strong>MBA · PGD-HRM</strong>
-            <span>Postgraduate credentials</span>
-          </li>
-          <li>
-            <strong>Shivamogga</strong>
-            <span>Division office</span>
-          </li>
-        </ul>
+        <img
+          src="/profile-pic.jpeg"
+          alt="Purushothama P B"
+          className="hero__portrait"
+        />
       </motion.aside>
     </section>
   );
