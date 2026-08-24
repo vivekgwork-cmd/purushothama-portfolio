@@ -5,6 +5,7 @@ import QuoteBand from "./components/QuoteBand";
 import About from "./components/About";
 import Benefits from "./components/Benefits";
 import Process from "./components/Process";
+import Testimonials from "./components/Testimonials";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 
@@ -18,6 +19,7 @@ export default function App() {
         <About />
         <Benefits />
         <Process />
+        <Testimonials />
         <ContactForm />
       </main>
       <Footer />

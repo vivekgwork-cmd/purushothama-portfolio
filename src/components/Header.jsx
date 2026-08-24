@@ -5,6 +5,7 @@ const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#opportunity", label: "Why LIC" },
   { href: "#process", label: "Process" },
+  { href: "#testimonials", label: "Success Stories" },
   { href: "#contact", label: "Contact" },
 ];
 

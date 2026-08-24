@@ -43,8 +43,12 @@ export default function Footer() {
             <br />
             Shivamogga-II, Shivamogga Division
           </p>
-          <p className="site-footer__todo">
-            Phone / email to be added
+          <p>
+            <a href="tel:+919535484475">+91 95354 84475</a>
+            <br />
+            <a href="mailto:purushothama.purushothama@gmail.com">
+              purushothama.purushothama@gmail.com
+            </a>
           </p>
         </div>
       </div>
