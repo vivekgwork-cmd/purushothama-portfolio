@@ -1,5 +1,4 @@
 import logo from "../assets/logo.png";
-import licLogo from "../assets/lic-logo.png";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -10,7 +9,6 @@ export default function Footer() {
         <div className="site-footer__brand">
           <div className="site-footer__logos">
             <img src={logo} alt="P. Utham" />
-            <img src={licLogo} alt="Life Insurance Corporation of India" />
           </div>
           <p>
             Purushothama P B — Development Officer, Life Insurance Corporation of
