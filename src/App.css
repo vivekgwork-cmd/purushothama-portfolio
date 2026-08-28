@@ -932,11 +932,13 @@
     padding: 40px;
     box-shadow: var(--shadow-lg);
     transform: translateX(100%);
-    transition: transform 0.3s ease;
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s ease;
   }
 
   .site-nav.is-open {
     transform: translateX(0);
+    visibility: visible;
   }
 
   .site-nav__rule {
