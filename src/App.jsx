@@ -8,6 +8,7 @@ import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <ContactForm />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

@@ -29,7 +29,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero__lede">
-            Guiding aspiring advisors toward financial freedom, stability and a career
+            Guiding aspiring advisors towards financial freedom, stability and a career
             built on trust — under the banner of India&rsquo;s most trusted insurance
             brand, the Life Insurance Corporation of India.
           </p>
