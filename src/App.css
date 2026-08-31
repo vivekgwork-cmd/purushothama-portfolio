@@ -1020,7 +1020,7 @@
 
 .whatsapp-fab {
   position: fixed;
-  left: 24px;
+  right: 24px;
   bottom: 24px;
   z-index: 200;
   display: flex;
@@ -1048,7 +1048,7 @@
 
 @media (max-width: 600px) {
   .whatsapp-fab {
-    left: 16px;
+    right: 16px;
     bottom: 16px;
     width: 50px;
     height: 50px;
